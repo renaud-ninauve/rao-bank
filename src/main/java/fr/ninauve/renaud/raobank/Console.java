@@ -18,7 +18,7 @@ public class Console {
   }
 
   public void showBalance(long balance){
-
+    System.out.println("Your balance is : "+ balance);
   }
 
   public String getUserInput() {
