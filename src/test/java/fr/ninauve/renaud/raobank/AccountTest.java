@@ -1,6 +1,6 @@
 package fr.ninauve.renaud.raobank;
 
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,7 +14,7 @@ class AccountTest {
   private static final long BALANCE_AFTER_DEPOSIT = 1012L;
   private static final long BALANCE_AFTER_RETRIEVE = 988L;
 
-  @Before
+  @BeforeEach
   public void setUp() {
 
     this.account = new Account(BALANCE_INIT);
