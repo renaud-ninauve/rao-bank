@@ -17,6 +17,10 @@ public class Console {
     System.out.println("Please enter your account ID :");
   }
 
+  public void showBalance(long balance){
+
+  }
+
   public String getUserInput() {
     return in.nextLine();
   }

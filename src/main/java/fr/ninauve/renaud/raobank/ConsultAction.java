@@ -18,7 +18,7 @@ public class ConsultAction {
     }
 
     public void consult(String userAccount) {
-        Date now = new Date();
-        System.out.println("As of " + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(now) + " , Your balance is : " + accountDao.find(userAccount).balance());
+
+        console.showBalance(accountDao.find(userAccount).balance());
     }
 }
