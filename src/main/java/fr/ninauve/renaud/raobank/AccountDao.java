@@ -1,5 +1,8 @@
 package fr.ninauve.renaud.raobank;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class AccountDao {
 
   private Account account = new Account(1000L);
