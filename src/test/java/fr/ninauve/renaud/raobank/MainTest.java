@@ -40,4 +40,31 @@ class MainTest {
     verifyNoMoreInteractions(depositAction, retrievalAction);
   }
 
+  @Test
+  public void should_choose_deposit() {
+
+    when(authenticateAction.authenticate())
+        .thenReturn(USER_ACCOUNT);
+    when(selectOperationAction.select())
+        .thenReturn(Operation.DEPOSIT);
+
+    main.run();
+
+    verify(depositAction).deposit(USER_ACCOUNT);
+    verifyNoMoreInteractions(consultAction, retrievalAction);
+  }
+
+  @Test
+  public void should_choose_retrieval() {
+
+    when(authenticateAction.authenticate())
+        .thenReturn(USER_ACCOUNT);
+    when(selectOperationAction.select())
+        .thenReturn(Operation.RETRIEVAL);
+
+    main.run();
+
+    verify(retrievalAction).retrieval(USER_ACCOUNT);
+    verifyNoMoreInteractions(consultAction, retrievalAction);
+  }
 }
