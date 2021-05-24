@@ -10,14 +10,16 @@ public class Account {
 
   public void deposit(long amount) {
 
+    this.balance += amount;
   }
 
   public void retrieval(long amount) {
 
+    this.balance -= amount;
   }
 
   public long balance() {
 
-    return 0l;
+    return balance;
   }
 }
