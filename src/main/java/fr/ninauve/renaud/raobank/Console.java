@@ -9,6 +9,10 @@ public class Console {
 
   }
 
+  public void showLoginForm() {
+
+  }
+
   public String getUserInput() {
 
     return null;
