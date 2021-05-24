@@ -26,5 +26,6 @@ public class Main {
 
   public void run() {
 
+    console.showMenu();
   }
 }
