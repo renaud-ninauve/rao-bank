@@ -1,5 +1,8 @@
 package fr.ninauve.renaud.raobank;
 
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
 public class Account {
 
   private long balance;
