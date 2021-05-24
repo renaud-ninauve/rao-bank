@@ -6,15 +6,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class AuthenticateAction {
 
-  private final Console console;
+    private final Console console;
 
-  @Autowired
-  public AuthenticateAction(Console console) {
-    this.console = console;
-  }
 
-  public String authenticate() {
+    @Autowired
+    public AuthenticateAction(Console console) {
+        this.console = console;
+    }
 
-    return null;
-  }
+    public String authenticate() {
+        console.showLoginForm();
+        return console.getUserInput();
+    }
 }
