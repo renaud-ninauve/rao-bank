@@ -29,8 +29,8 @@ class OperationParserTest {
     }
 
     @Test
-    public void should_parse_retreival() {
-        Operation actual = operationParser.parse("RETREIVAL");
+    public void should_parse_retrieval() {
+        Operation actual = operationParser.parse("RETRIEVAL");
         assertThat(actual).isEqualTo(Operation.RETRIEVAL);
     }
 

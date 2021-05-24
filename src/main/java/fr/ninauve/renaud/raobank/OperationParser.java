@@ -6,6 +6,12 @@ import org.springframework.stereotype.Component;
 public class OperationParser {
 
     public Operation parse(String operation) {
-        return null;
+        for (Operation each : Operation.values()) {
+            if (each.name().equals(operation)) {
+                return each;
+            }
+        }
+        throw new IllegalArgumentException("Could not parse user input");
     }
 }
+
